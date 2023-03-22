@@ -1,0 +1,37 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+table{
+    border-spacing: 0;
+    border-collapse: collapse;
+    width: 800px;
+    margin: 100px auto;
+}
+
+td, th{
+    border: solid 1px rgb(153, 153, 153);
+    padding: 5px;
+}
+
+tr:nth-child(even){
+    background-color: rgb(241, 241, 241);
+}
+
+td:nth-child(n + 3),
+th:nth-child(n + 3){ /* Desde la columna 3 en adelante*/
+    text-align: center;
+}
+
+tbody tr:hover{
+    background-color: rgb(183, 216, 252);
+}
+
+thead{
+    background-color: black;
+    color: white;
+    position: sticky;
+    top: 0;
+}

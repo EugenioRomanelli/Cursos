@@ -1,0 +1,209 @@
+.material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px; /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: "liga";
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+  line-height: 1.5;
+
+  background-color: black;
+}
+
+/*********
+  NAVBAR 
+*********/
+
+.show {
+  display: flex !important;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li > a {
+  display: block;
+  position: relative;
+  padding: 20px 15px 10px 15px;
+  text-decoration: none;
+
+  color: white;
+}
+
+nav ul li .link::before {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+
+  background-color: rgb(206, 144, 29);
+}
+
+nav ul li .link:hover::before {
+  transform: scale(1);
+}
+
+nav .more {
+  display: none;
+}
+
+nav .menu {
+  margin-top: 60px;
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  min-width: 200px;
+  background-color: rgb(0, 0, 0);
+}
+
+nav .menu a {
+  padding: 10px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+nav .menu a:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+}
+
+nav .mobile {
+  display: none;
+  width: 100%;
+}
+
+nav .mobile .header {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  flex-direction: row;
+
+  background-color: black;
+}
+
+nav .mobile .header a {
+  color: white;
+  text-decoration: none;
+  padding: 5px;
+  display: inline-flex;
+}
+
+nav .mobile .header #bmenu {
+  border: none;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+}
+
+nav .mobile .links {
+  display: none;
+  flex-direction: column;
+  position: relative;
+  z-index: 200;
+
+  background-color: black;
+}
+
+nav .mobile .links a {
+  font-size: 18px;
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: white;
+}
+
+nav .mobile .links a:hover {
+  font-size: 18px;
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: black;
+  background-color: white;
+}
+
+/*********
+  HEADER 
+*********/
+
+header {
+  background-image: url(halo-infinite-cover-darkmode.jpg);
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+}
+
+@media screen and (max-width: 1132px) {
+  nav .link-hide {
+    display: none;
+  }
+
+  nav .more {
+    display: flex;
+  }
+
+  header {
+    height: 70vh;
+  }
+}
+
+@media screen and (max-width: 642px) {
+  nav {
+    width: 100%;
+    padding: 0;
+  }
+  nav ul {
+    display: none;
+  }
+
+  nav .mobile {
+    display: block;
+  }
+
+  header {
+    background-position: center 40px;
+    height: 30vh;
+  }
+}

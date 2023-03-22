@@ -1,0 +1,169 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: rgb(145, 24, 127);
+}
+
+.form-container{
+    background-color: white;
+    width: 80%;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 90%;
+
+    display: flex;
+    align-items: center;
+}
+
+.form-container .login-container{
+    width: 400px;
+    margin: 0 auto;
+}
+
+.form-container .login-container >h2{
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.form-container .login-container > p,
+.form-container .login-container > span{
+    text-align: center;
+    color: #666;
+}
+
+.form-container .login-container label{
+    display: block;
+    font-weight: bold;
+    padding: 5px 0;
+}
+
+.form-container .login-container input.input{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    border: solid 1px #ccc;
+    border-radius: 5px;
+}
+
+.form-container .login-container input.input:focus{
+    outline: solid 2px #0099ff;
+}
+
+.form-container .login-container .options{
+    display: flex;
+    justify-content: space-between;
+    align-items: cneter;
+    
+}
+
+.form-container a{
+    color: #0099ff;
+    text-decoration: none;
+}
+
+.form-container a:hover{
+    text-decoration: underline;
+}
+
+.form-container .login-container .providers{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+
+}
+
+.btn{
+    border: none;
+    padding: 15px 0;
+    width: 100%;
+    font-weight: bolder;
+    display:  block;
+    border-radius: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.btn.btn-login{
+    background-color: black;
+    color: white;
+}
+
+.btn.btn-login:hover{
+    background-color: #333;
+    color: white;
+}
+
+.btn.btn-facebook{
+    background-color: rgb(42, 29, 146);
+    color: white;
+}
+
+.btn.btn-facebook:hover{
+    background-color: rgb(18, 12, 62);
+}
+
+.btn.btn-google{
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border: solid 1px #ccc;
+}
+
+.btn.btn-google:hover{
+    background-color: rgb(212, 212, 212);
+}
+
+.btn.btn-twitter{
+    background-color: rgb(10, 168, 216);
+    color: white;
+}
+
+.btn.btn-twitter:hover{
+    background-color: rgb(9, 86, 110);
+}
+
+.form-container .welcome-screen-container{
+    background-color: black;
+    height: 100%;
+    width: 50%;
+}
+
+@media screen and (max-width: 1300px){
+    .form-container{
+        width: 95%;
+    }
+
+    .form-container .login-container{
+        width: 400px;
+        margin: 0 auto;
+    }
+
+    .form-container .welcome-screen-container{
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 710px){
+
+    .form-container{
+        height: 90%;
+    }
+
+    .form-container.login-container{
+        width: 350px;
+    }
+
+    .form-container .welcome-screen-container{
+        display: none;
+    }
+
+}
